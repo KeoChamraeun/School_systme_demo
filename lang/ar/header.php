@@ -1,14 +1,9 @@
-
-
 <?php
 
-
-return
-[
-    'logout'=>'تسجيل الخروج',
-    'search-placeholder'=>'أكتب هنا...',
-    'notifications'=>'الأشعارات',
-    'view-all'=>'مشاهدة الكل',
-    'no-notifications'=>'لا توجد اي اشعارات غير مقروءه حاليا.',
-
+return [
+    'logout' => 'ចាកចេញ',
+    'search-placeholder' => 'សូមវាយបញ្ចូលទីនេះ...',
+    'notifications' => 'ការជូនដំណឹង',
+    'view-all' => 'មើលទាំងអស់',
+    'no-notifications' => 'មិនមានការជូនដំណឹងថ្មីណាមួយឡើយនៅពេលនេះ។',
 ];

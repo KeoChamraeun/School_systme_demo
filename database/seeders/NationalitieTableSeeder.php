@@ -19,1238 +19,984 @@ class NationalitieTableSeeder extends Seeder
         $nationals = [
 
             [
-                'en'=> 'Afghan',
-                'ar'=> 'أفغانستاني'
+                'en' => 'Afghan',
+                'ar' => 'អាហ្វហ្គាន'
             ],
             [
-
-                'en'=> 'Albanian',
-                'ar'=> 'ألباني'
+                'en' => 'Albanian',
+                'ar' => 'អាល់បានី'
             ],
             [
-
-                'en'=> 'Aland Islander',
-                'ar'=> 'آلاندي'
+                'en' => 'Aland Islander',
+                'ar' => 'ជនជាតិកោះអាឡង់'
             ],
             [
-
-                'en'=> 'Algerian',
-                'ar'=> 'جزائري'
+                'en' => 'Algerian',
+                'ar' => 'អាល់ហ្សេរី'
             ],
             [
-
-                'en'=> 'American Samoan',
-                'ar'=> 'أمريكي سامواني'
+                'en' => 'American Samoan',
+                'ar' => 'សាមូអានអាមេរិក'
             ],
             [
-
-                'en'=> 'Andorran',
-                'ar'=> 'أندوري'
+                'en' => 'Andorran',
+                'ar' => 'អង់ដូរ៉ា'
             ],
             [
-
-                'en'=> 'Angolan',
-                'ar'=> 'أنقولي'
+                'en' => 'Angolan',
+                'ar' => 'អង់ហ្គោលា'
             ],
             [
-
-                'en'=> 'Anguillan',
-                'ar'=> 'أنغويلي'
+                'en' => 'Anguillan',
+                'ar' => 'អង់គីឡា'
             ],
             [
-
-                'en'=> 'Antarctican',
-                'ar'=> 'أنتاركتيكي'
+                'en' => 'Antarctican',
+                'ar' => 'អ្នកស្រុកអង់តាក្ទិក'
             ],
             [
-
-                'en'=> 'Antiguan',
-                'ar'=> 'بربودي'
+                'en' => 'Antiguan',
+                'ar' => 'អង់ទីហ្គា'
             ],
             [
-
-                'en'=> 'Argentinian',
-                'ar'=> 'أرجنتيني'
+                'en' => 'Argentinian',
+                'ar' => 'អាហ្សង់ទីន'
             ],
             [
-
-                'en'=> 'Armenian',
-                'ar'=> 'أرميني'
+                'en' => 'Armenian',
+                'ar' => 'អាមែនី'
             ],
             [
-
-                'en'=> 'Aruban',
-                'ar'=> 'أوروبهيني'
+                'en' => 'Aruban',
+                'ar' => 'អារ៉ូប៉ា'
             ],
             [
-
-                'en'=> 'Australian',
-                'ar'=> 'أسترالي'
+                'en' => 'Australian',
+                'ar' => 'អូស្ត្រាលី'
             ],
             [
-
-                'en'=> 'Austrian',
-                'ar'=> 'نمساوي'
+                'en' => 'Austrian',
+                'ar' => 'អូទ្រីស'
             ],
             [
-
-                'en'=> 'Azerbaijani',
-                'ar'=> 'أذربيجاني'
+                'en' => 'Azerbaijani',
+                'ar' => 'អាស៊ែបៃហ្សង់'
             ],
             [
-
-                'en'=> 'Bahamian',
-                'ar'=> 'باهاميسي'
+                'en' => 'Bahamian',
+                'ar' => 'បាហាម៉ា'
             ],
             [
-
-                'en'=> 'Bahraini',
-                'ar'=> 'بحريني'
+                'en' => 'Bahraini',
+                'ar' => 'បារ៉ែន'
             ],
             [
-
-                'en'=> 'Bangladeshi',
-                'ar'=> 'بنغلاديشي'
+                'en' => 'Bangladeshi',
+                'ar' => 'បង់ក្លាដែស'
             ],
             [
-
-                'en'=> 'Barbadian',
-                'ar'=> 'بربادوسي'
+                'en' => 'Barbadian',
+                'ar' => 'បាធូដា'
             ],
             [
-
-                'en'=> 'Belarusian',
-                'ar'=> 'روسي'
+                'en' => 'Belarusian',
+                'ar' => 'បេលារុស'
             ],
             [
-
-                'en'=> 'Belgian',
-                'ar'=> 'بلجيكي'
+                'en' => 'Belgian',
+                'ar' => 'បែលហ្សិក'
             ],
             [
-
-                'en'=> 'Belizean',
-                'ar'=> 'بيليزي'
+                'en' => 'Belizean',
+                'ar' => 'បេលីស'
             ],
             [
-
-                'en'=> 'Beninese',
-                'ar'=> 'بنيني'
+                'en' => 'Beninese',
+                'ar' => 'បេនីន'
             ],
             [
-
-                'en'=> 'Saint Barthelmian',
-                'ar'=> 'سان بارتيلمي'
+                'en' => 'Saint Barthelmian',
+                'ar' => 'សាំងបាត់ទែលមេ'
             ],
             [
-
-                'en'=> 'Bermudan',
-                'ar'=> 'برمودي'
+                'en' => 'Bermudan',
+                'ar' => 'ប៊ើមុដា'
             ],
             [
-
-                'en'=> 'Bhutanese',
-                'ar'=> 'بوتاني'
+                'en' => 'Bhutanese',
+                'ar' => 'ภูฏាន'
             ],
             [
-
-                'en'=> 'Bolivian',
-                'ar'=> 'بوليفي'
+                'en' => 'Bolivian',
+                'ar' => 'បូលីវី'
             ],
             [
-
-                'en'=> 'Bosnian / Herzegovinian',
-                'ar'=> 'بوسني/هرسكي'
+                'en' => 'Bosnian / Herzegovinian',
+                'ar' => 'បូស្នី / ហឺស្សេហ្គូវីនី'
             ],
             [
-
-                'en'=> 'Botswanan',
-                'ar'=> 'بوتسواني'
+                'en' => 'Botswanan',
+                'ar' => 'បុតស្វាណា'
             ],
             [
-
-                'en'=> 'Bouvetian',
-                'ar'=> 'بوفيهي'
+                'en' => 'Bouvetian',
+                'ar' => 'បូវ៉ែ'
             ],
             [
-
-                'en'=> 'Brazilian',
-                'ar'=> 'برازيلي'
+                'en' => 'Brazilian',
+                'ar' => 'ប្រេស៊ីល'
             ],
             [
-
-                'en'=> 'British Indian Ocean Territory',
-                'ar'=> 'إقليم المحيط الهندي البريطاني'
+                'en' => 'British Indian Ocean Territory',
+                'ar' => 'ដែនដីសមុទ្រឥណ្ឌា ប្រ៊ិទាញ'
             ],
             [
-
-                'en'=> 'Bruneian',
-                'ar'=> 'بروني'
+                'en' => 'Bruneian',
+                'ar' => 'ប្រ៊ូនៃ'
             ],
             [
-
-                'en'=> 'Bulgarian',
-                'ar'=> 'بلغاري'
+                'en' => 'Bulgarian',
+                'ar' => 'ប៊ុលហ្គារី'
             ],
             [
-
-                'en'=> 'Burkinabe',
-                'ar'=> 'بوركيني'
+                'en' => 'Burkinabe',
+                'ar' => 'ប៊ួគីណាហ្វាសូ'
             ],
             [
-
-                'en'=> 'Burundian',
-                'ar'=> 'بورونيدي'
+                'en' => 'Burundian',
+                'ar' => 'ប៊ូរុនឌី'
             ],
             [
-
-                'en'=> 'Cambodian',
-                'ar'=> 'كمبودي'
+                'en' => 'Cambodian',
+                'ar' => 'ខ្មែរ'
             ],
             [
-
-                'en'=> 'Cameroonian',
-                'ar'=> 'كاميروني'
+                'en' => 'Cameroonian',
+                'ar' => 'កាមេរូន'
             ],
             [
-
-                'en'=> 'Canadian',
-                'ar'=> 'كندي'
+                'en' => 'Canadian',
+                'ar' => 'កាណាដា'
             ],
             [
-
-                'en'=> 'Cape Verdean',
-                'ar'=> 'الرأس الأخضر'
+                'en' => 'Cape Verdean',
+                'ar' => 'កាផេវើដ'
             ],
             [
-
-                'en'=> 'Caymanian',
-                'ar'=> 'كايماني'
+                'en' => 'Caymanian',
+                'ar' => 'កៃម៉ែន'
             ],
             [
-
-                'en'=> 'Central African',
-                'ar'=> 'أفريقي'
+                'en' => 'Central African',
+                'ar' => 'អាហ្វ្រិកកណ្ដាល'
             ],
             [
-
-                'en'=> 'Chadian',
-                'ar'=> 'تشادي'
+                'en' => 'Chadian',
+                'ar' => 'ជនជាតិឆាដ'
             ],
             [
-
-                'en'=> 'Chilean',
-                'ar'=> 'شيلي'
+                'en' => 'Chilean',
+                'ar' => 'ជនជាតិឈីលី'
             ],
             [
-
-                'en'=> 'Chinese',
-                'ar'=> 'صيني'
+                'en' => 'Chinese',
+                'ar' => 'ជនជាតិចិន'
             ],
             [
-
-                'en'=> 'Christmas Islander',
-                'ar'=> 'جزيرة عيد الميلاد'
+                'en' => 'Christmas Islander',
+                'ar' => 'ជនជាតិកោះគ្រីស្តម៉ាស'
             ],
             [
-
-                'en'=> 'Cocos Islander',
-                'ar'=> 'جزر كوكوس'
+                'en' => 'Cocos Islander',
+                'ar' => 'ជនជាតិកោះកូកូស'
             ],
             [
-
-                'en'=> 'Colombian',
-                'ar'=> 'كولومبي'
+                'en' => 'Colombian',
+                'ar' => 'ជនជាតិកូឡុំប៊ី'
             ],
             [
-
-                'en'=> 'Comorian',
-                'ar'=> 'جزر القمر'
+                'en' => 'Comorian',
+                'ar' => 'ជនជាតិកុម័រ'
             ],
             [
-
-                'en'=> 'Congolese',
-                'ar'=> 'كونغي'
+                'en' => 'Congolese',
+                'ar' => 'ជនជាតិកុងហ្គោ'
             ],
             [
-
-                'en'=> 'Cook Islander',
-                'ar'=> 'جزر كوك'
+                'en' => 'Cook Islander',
+                'ar' => 'ជនជាតិកោះកុក'
             ],
             [
-
-                'en'=> 'Costa Rican',
-                'ar'=> 'كوستاريكي'
+                'en' => 'Costa Rican',
+                'ar' => 'ជនជាតិកូស្តារីកា'
             ],
             [
-
-                'en'=> 'Croatian',
-                'ar'=> 'كوراتي'
+                'en' => 'Croatian',
+                'ar' => 'ជនជាតិក្រូអាត'
             ],
             [
-
-                'en'=> 'Cuban',
-                'ar'=> 'كوبي'
+                'en' => 'Cuban',
+                'ar' => 'ជនជាតិគុយបា'
             ],
             [
-
-                'en'=> 'Cypriot',
-                'ar'=> 'قبرصي'
+                'en' => 'Cypriot',
+                'ar' => 'ជនជាតិស៊ីប'
             ],
             [
-
-                'en'=> 'Curacian',
-                'ar'=> 'كوراساوي'
+                'en' => 'Curacian',
+                'ar' => 'ជនជាតិកូរ៉ាសៅ'
             ],
             [
-
-                'en'=> 'Czech',
-                'ar'=> 'تشيكي'
+                'en' => 'Czech',
+                'ar' => 'ជនជាតិឆែក'
             ],
             [
-
-                'en'=> 'Danish',
-                'ar'=> 'دنماركي'
+                'en' => 'Danish',
+                'ar' => 'ជនជាតិដាណឺម៉ាក'
             ],
             [
-
-                'en'=> 'Djiboutian',
-                'ar'=> 'جيبوتي'
+                'en' => 'Djiboutian',
+                'ar' => 'ជនជាតិជីប៊ូទី'
             ],
             [
-
-                'en'=> 'Dominican',
-                'ar'=> 'دومينيكي'
+                'en' => 'Dominican',
+                'ar' => 'ជនជាតិដូមីនីក'
             ],
             [
-
-                'en'=> 'Dominican',
-                'ar'=> 'دومينيكي'
+                'en' => 'Ecuadorian',
+                'ar' => 'ជនជាតិអេក្វាឌ័រ'
             ],
             [
-
-                'en'=> 'Ecuadorian',
-                'ar'=> 'إكوادوري'
+                'en' => 'Egyptian',
+                'ar' => 'ជនជាតិអេហ្ស៊ីប'
             ],
             [
-
-                'en'=> 'Egyptian',
-                'ar'=> 'مصري'
+                'en' => 'Salvadoran',
+                'ar' => 'ជនជាតិសាល់វ៉ាឌ័រ'
             ],
             [
-
-                'en'=> 'Salvadoran',
-                'ar'=> 'سلفادوري'
+                'en' => 'Equatorial Guinean',
+                'ar' => 'ជនជាតិហ្គីណេអេក្វាទ័រ'
             ],
             [
-
-                'en'=> 'Equatorial Guinean',
-                'ar'=> 'غيني'
+                'en' => 'Eritrean',
+                'ar' => 'ជនជាតិអេរីទ្រា'
             ],
             [
-
-                'en'=> 'Eritrean',
-                'ar'=> 'إريتيري'
+                'en' => 'Estonian',
+                'ar' => 'ជនជាតិអេស្តូនី'
             ],
             [
-
-                'en'=> 'Estonian',
-                'ar'=> 'استوني'
+                'en' => 'Ethiopian',
+                'ar' => 'ជនជាតិអេត្យូពី'
             ],
             [
-
-                'en'=> 'Ethiopian',
-                'ar'=> 'أثيوبي'
+                'en' => 'Falkland Islander',
+                'ar' => 'ជនជាតិកោះហ្វកលែន'
             ],
             [
-
-                'en'=> 'Falkland Islander',
-                'ar'=> 'فوكلاندي'
+                'en' => 'Faroese',
+                'ar' => 'ជនជាតិកោះហ្វារ៉ូ'
             ],
             [
-
-                'en'=> 'Faroese',
-                'ar'=> 'جزر فارو'
+                'en' => 'Fijian',
+                'ar' => 'ជនជាតិហ្វីជី'
             ],
             [
-
-                'en'=> 'Fijian',
-                'ar'=> 'فيجي'
+                'en' => 'Finnish',
+                'ar' => 'ជនជាតិហ្វាំងឡង់'
             ],
             [
-
-                'en'=> 'Finnish',
-                'ar'=> 'فنلندي'
+                'en' => 'French',
+                'ar' => 'ជនជាតិបារាំង'
             ],
             [
-
-                'en'=> 'French',
-                'ar'=> 'فرنسي'
+                'en' => 'French Guianese',
+                'ar' => 'ជនជាតិហ្គីយ៉ានបារាំង'
             ],
             [
-
-                'en'=> 'French Guianese',
-                'ar'=> 'غويانا الفرنسية'
+                'en' => 'French Polynesian',
+                'ar' => 'ជនជាតិប៉ូលីនេស៊ីបារាំង'
             ],
             [
-
-                'en'=> 'French Polynesian',
-                'ar'=> 'بولينيزيي'
+                'en' => 'Gabonese',
+                'ar' => 'ជនជាតិហ្គាបុង'
             ],
             [
-
-                'en'=> 'French',
-                'ar'=> 'أراض فرنسية جنوبية وأنتارتيكية'
+                'en' => 'Gambian',
+                'ar' => 'ជនជាតិហ្គាំប៊ី'
             ],
             [
-
-                'en'=> 'Gabonese',
-                'ar'=> 'غابوني'
+                'en' => 'Georgian',
+                'ar' => 'ជនជាតិហ្សកហ្ស៊ី'
             ],
             [
-
-                'en'=> 'Gambian',
-                'ar'=> 'غامبي'
+                'en' => 'German',
+                'ar' => 'ជនជាតិអាល្លឺម៉ង់'
             ],
             [
-
-                'en'=> 'Georgian',
-                'ar'=> 'جيورجي'
+                'en' => 'Ghanaian',
+                'ar' => 'ជនជាតិហ្គាណា'
             ],
             [
-
-                'en'=> 'German',
-                'ar'=> 'ألماني'
+                'en' => 'Gibraltar',
+                'ar' => 'ជនជាតិជីប្រាល់តា'
             ],
             [
-
-                'en'=> 'Ghanaian',
-                'ar'=> 'غاني'
+                'en' => 'Guernsian',
+                'ar' => 'ជនជាតិហ្គឺនស៊ី'
             ],
             [
-
-                'en'=> 'Gibraltar',
-                'ar'=> 'جبل طارق'
+                'en' => 'Greek',
+                'ar' => 'ជនជាតិក្រិក'
             ],
             [
-
-                'en'=> 'Guernsian',
-                'ar'=> 'غيرنزي'
+                'en' => 'Greenlandic',
+                'ar' => 'ជនជាតិហ្គ្រីនឡែន'
             ],
             [
-
-                'en'=> 'Greek',
-                'ar'=> 'يوناني'
+                'en' => 'Grenadian',
+                'ar' => 'ជនជាតិហ្គ្រេណាដា'
             ],
             [
-
-                'en'=> 'Greenlandic',
-                'ar'=> 'جرينلاندي'
+                'en' => 'Guadeloupe',
+                'ar' => 'ជនជាតិហ្គាដឺលូប'
             ],
             [
-
-                'en'=> 'Grenadian',
-                'ar'=> 'غرينادي'
+                'en' => 'Guamanian',
+                'ar' => 'ជនជាតិហ្គាំ'
             ],
             [
-
-                'en'=> 'Guadeloupe',
-                'ar'=> 'جزر جوادلوب'
+                'en' => 'Guatemalan',
+                'ar' => 'ជនជាតិហ្គាតេម៉ាឡា'
             ],
             [
-
-                'en'=> 'Guamanian',
-                'ar'=> 'جوامي'
+                'en' => 'Guinean',
+                'ar' => 'ជនជាតិហ្គីណេ'
             ],
             [
-
-                'en'=> 'Guatemalan',
-                'ar'=> 'غواتيمالي'
+                'en' => 'Guinea-Bissauan',
+                'ar' => 'ជនជាតិហ្គីណេប៊ីសៅ'
             ],
             [
-
-                'en'=> 'Guinean',
-                'ar'=> 'غيني'
+                'en' => 'Guyanese',
+                'ar' => 'ជនជាតិហ្គីយ៉ាណា'
             ],
             [
-
-                'en'=> 'Guinea-Bissauan',
-                'ar'=> 'غيني'
+                'en' => 'Haitian',
+                'ar' => 'ជនជាតិហៃទី'
             ],
             [
-
-                'en'=> 'Guyanese',
-                'ar'=> 'غياني'
+                'en' => 'Heard and Mc Donald Islanders',
+                'ar' => 'ជនជាតិកោះហឺដនិងម៉ាកដូណល់'
             ],
             [
-
-                'en'=> 'Haitian',
-                'ar'=> 'هايتي'
+                'en' => 'Honduran',
+                'ar' => 'ជនជាតិហុងឌុយរ៉ាស'
             ],
             [
-
-                'en'=> 'Heard and Mc Donald Islanders',
-                'ar'=> 'جزيرة هيرد وجزر ماكدونالد'
+                'en' => 'Hongkongese',
+                'ar' => 'ជនជាតិហុងកុង'
             ],
             [
-
-                'en'=> 'Honduran',
-                'ar'=> 'هندوراسي'
+                'en' => 'Hungarian',
+                'ar' => 'ជនជាតិហុងគ្រី'
             ],
             [
-
-                'en'=> 'Hongkongese',
-                'ar'=> 'هونغ كونغي'
+                'en' => 'Icelandic',
+                'ar' => 'ជនជាតិអ៊ីស្លង់'
             ],
             [
-
-                'en'=> 'Hungarian',
-                'ar'=> 'مجري'
+                'en' => 'Indian',
+                'ar' => 'ជនជាតិឥណ្ឌា'
             ],
             [
-
-                'en'=> 'Icelandic',
-                'ar'=> 'آيسلندي'
+                'en' => 'Manx',
+                'ar' => 'ជនជាតិម៉ាន'
             ],
             [
-
-                'en'=> 'Indian',
-                'ar'=> 'هندي'
+                'en' => 'Indonesian',
+                'ar' => 'ជនជាតិឥណ្ឌូនេស៊ី'
             ],
             [
-
-                'en'=> 'Manx',
-                'ar'=> 'ماني'
+                'en' => 'Iranian',
+                'ar' => 'ជនជាតិអ៊ីរ៉ង់'
             ],
             [
-
-                'en'=> 'Indonesian',
-                'ar'=> 'أندونيسيي'
+                'en' => 'Iraqi',
+                'ar' => 'ជនជាតិអ៊ីរ៉ាក់'
             ],
             [
-
-                'en'=> 'Iranian',
-                'ar'=> 'إيراني'
+                'en' => 'Irish',
+                'ar' => 'ជនជាតិអៀរឡង់'
             ],
             [
-
-                'en'=> 'Iraqi',
-                'ar'=> 'عراقي'
+                'en' => 'Italian',
+                'ar' => 'ជនជាតិអ៊ីតាលី'
             ],
             [
-
-                'en'=> 'Irish',
-                'ar'=> 'إيرلندي'
+                'en' => 'Ivory Coastian',
+                'ar' => 'ជនជាតិកូតឌីវ័រ'
             ],
             [
-
-                'en'=> 'Italian',
-                'ar'=> 'إيطالي'
+                'en' => 'Jersian',
+                'ar' => 'ជនជាតិជឺស៊ី'
             ],
             [
-
-                'en'=> 'Ivory Coastian',
-                'ar'=> 'ساحل العاج'
+                'en' => 'Jamaican',
+                'ar' => 'ជនជាតិហ្សាម៉ាអ៊ីក'
             ],
             [
-
-                'en'=> 'Jersian',
-                'ar'=> 'جيرزي'
+                'en' => 'Japanese',
+                'ar' => 'ជនជាតិជប៉ុន'
             ],
             [
-
-                'en'=> 'Jamaican',
-                'ar'=> 'جمايكي'
+                'en' => 'Jordanian',
+                'ar' => 'ជនជាតិហ្ស៊កដានី'
             ],
             [
-
-                'en'=> 'Japanese',
-                'ar'=> 'ياباني'
+                'en' => 'Kazakh',
+                'ar' => 'ជនជាតិកាហ្សាក់'
             ],
             [
-
-                'en'=> 'Jordanian',
-                'ar'=> 'أردني'
+                'en' => 'Kenyan',
+                'ar' => 'ជនជាតិកេនយ៉ា'
             ],
             [
-
-                'en'=> 'Kazakh',
-                'ar'=> 'كازاخستاني'
+                'en' => 'I-Kiribati',
+                'ar' => 'ជនជាតិគីរីបាទី'
             ],
             [
-
-                'en'=> 'Kenyan',
-                'ar'=> 'كيني'
+                'en' => 'North Korean',
+                'ar' => 'ជនជាតិកូរ៉េខាងជើង'
             ],
             [
-
-                'en'=> 'I-Kiribati',
-                'ar'=> 'كيريباتي'
+                'en' => 'South Korean',
+                'ar' => 'ជនជាតិកូរ៉េខាងត្បូង'
             ],
             [
-
-                'en'=> 'North Korean',
-                'ar'=> 'كوري'
+                'en' => 'Kosovar',
+                'ar' => 'ជនជាតិកូសូវ៉ូ'
             ],
             [
-
-                'en'=> 'South Korean',
-                'ar'=> 'كوري'
+                'en' => 'Kuwaiti',
+                'ar' => 'ជនជាតិគុយវ៉ែត'
             ],
             [
-
-                'en'=> 'Kosovar',
-                'ar'=> 'كوسيفي'
+                'en' => 'Kyrgyzstani',
+                'ar' => 'ជនជាតិកៀហ្ស៊ីស៊ីស្ថាន'
             ],
             [
-
-                'en'=> 'Kuwaiti',
-                'ar'=> 'كويتي'
+                'en' => 'Laotian',
+                'ar' => 'ជនជាតិឡាវ'
             ],
             [
-
-                'en'=> 'Kyrgyzstani',
-                'ar'=> 'قيرغيزستاني'
+                'en' => 'Latvian',
+                'ar' => 'ជនជាតិឡាតវី'
             ],
             [
-
-                'en'=> 'Laotian',
-                'ar'=> 'لاوسي'
+                'en' => 'Lebanese',
+                'ar' => 'ជនជាតិលីបង់'
             ],
             [
-
-                'en'=> 'Latvian',
-                'ar'=> 'لاتيفي'
+                'en' => 'Basotho',
+                'ar' => 'ជនជាតិបាសូតូ'
             ],
             [
-
-                'en'=> 'Lebanese',
-                'ar'=> 'لبناني'
+                'en' => 'Liberian',
+                'ar' => 'ជនជាតិលីបេរីយ៉ា'
             ],
             [
-
-                'en'=> 'Basotho',
-                'ar'=> 'ليوسيتي'
+                'en' => 'Libyan',
+                'ar' => 'ជនជាតិលីប៊ី'
             ],
             [
-
-                'en'=> 'Liberian',
-                'ar'=> 'ليبيري'
+                'en' => 'Liechtenstein',
+                'ar' => 'ជនជាតិលិចតិនស្តាញ'
             ],
             [
-
-                'en'=> 'Libyan',
-                'ar'=> 'ليبي'
+                'en' => 'Lithuanian',
+                'ar' => 'ជនជាតិលីទុយអានី'
             ],
             [
-
-                'en'=> 'Liechtenstein',
-                'ar'=> 'ليختنشتيني'
+                'en' => 'Luxembourger',
+                'ar' => 'ជនជាតិលុចសំបួ'
             ],
             [
-
-                'en'=> 'Lithuanian',
-                'ar'=> 'لتوانيي'
+                'en' => 'Sri Lankian',
+                'ar' => 'ជនជាតិស្រីលង្កា'
             ],
             [
-
-                'en'=> 'Luxembourger',
-                'ar'=> 'لوكسمبورغي'
+                'en' => 'Macanese',
+                'ar' => 'ជនជាតិម៉ាកាវ'
             ],
             [
-
-                'en'=> 'Sri Lankian',
-                'ar'=> 'سريلانكي'
+                'en' => 'Macedonian',
+                'ar' => 'ជនជាតិម៉ាសេដូនី'
             ],
             [
-
-                'en'=> 'Macanese',
-                'ar'=> 'ماكاوي'
+                'en' => 'Malagasy',
+                'ar' => 'ជនជាតិម៉ាឡាហ្គាស៊ី'
             ],
             [
-
-                'en'=> 'Macedonian',
-                'ar'=> 'مقدوني'
+                'en' => 'Malawian',
+                'ar' => 'ជនជាតិម៉ាឡាវី'
             ],
             [
-
-                'en'=> 'Malagasy',
-                'ar'=> 'مدغشقري'
+                'en' => 'Malaysian',
+                'ar' => 'ជនជាតិម៉ាឡេស៊ី'
             ],
             [
-
-                'en'=> 'Malawian',
-                'ar'=> 'مالاوي'
+                'en' => 'Maldivian',
+                'ar' => 'ជនជាតិម៉ាល់ឌីវ'
             ],
             [
-
-                'en'=> 'Malaysian',
-                'ar'=> 'ماليزي'
+                'en' => 'Malian',
+                'ar' => 'ជនជាតិម៉ាលី'
             ],
             [
-
-                'en'=> 'Maldivian',
-                'ar'=> 'مالديفي'
+                'en' => 'Maltese',
+                'ar' => 'ជនជាតិម៉ាល់តា'
             ],
             [
-
-                'en'=> 'Malian',
-                'ar'=> 'مالي'
+                'en' => 'Marshallese',
+                'ar' => 'ជនជាតិម៉ាស្សល'
             ],
             [
-
-                'en'=> 'Maltese',
-                'ar'=> 'مالطي'
+                'en' => 'Martiniquais',
+                'ar' => 'ជនជាតិម៉ាទីនីក'
             ],
             [
-
-                'en'=> 'Marshallese',
-                'ar'=> 'مارشالي'
+                'en' => 'Mauritanian',
+                'ar' => 'ជនជាតិម៉ូរីតានី'
             ],
             [
-
-                'en'=> 'Martiniquais',
-                'ar'=> 'مارتينيكي'
+                'en' => 'Mauritian',
+                'ar' => 'ជនជាតិម៉ូរីស'
             ],
             [
-
-                'en'=> 'Mauritanian',
-                'ar'=> 'موريتانيي'
+                'en' => 'Mahoran',
+                'ar' => 'ជនជាតិម៉ាយ៉ូត'
             ],
             [
-
-                'en'=> 'Mauritian',
-                'ar'=> 'موريشيوسي'
+                'en' => 'Mexican',
+                'ar' => 'ជនជាតិម៉ិកស៊ិក'
             ],
             [
-
-                'en'=> 'Mahoran',
-                'ar'=> 'مايوتي'
+                'en' => 'Micronesian',
+                'ar' => 'ជនជាតិមីក្រូនេស៊ី'
             ],
             [
-
-                'en'=> 'Mexican',
-                'ar'=> 'مكسيكي'
+                'en' => 'Moldovan',
+                'ar' => 'ជនជាតិម៉ុលដាវី'
             ],
             [
-
-                'en'=> 'Micronesian',
-                'ar'=> 'مايكرونيزيي'
+                'en' => 'Monacan',
+                'ar' => 'ជនជាតិម៉ូណាកូ'
             ],
             [
-
-                'en'=> 'Moldovan',
-                'ar'=> 'مولديفي'
+                'en' => 'Mongolian',
+                'ar' => 'ជនជាតិម៉ុងហ្គោលី'
             ],
             [
-
-                'en'=> 'Monacan',
-                'ar'=> 'مونيكي'
+                'en' => 'Montenegrin',
+                'ar' => 'ជនជាតិម៉ុនតេណេហ្គ្រីន'
             ],
             [
-
-                'en'=> 'Mongolian',
-                'ar'=> 'منغولي'
+                'en' => 'Montserratian',
+                'ar' => 'ជនជាតិម៉ុនសឺរ៉ាត'
             ],
             [
-
-                'en'=> 'Montenegrin',
-                'ar'=> 'الجبل الأسود'
+                'en' => 'Moroccan',
+                'ar' => 'ជនជាតិម៉ារ៉ុក'
             ],
             [
-
-                'en'=> 'Montserratian',
-                'ar'=> 'مونتسيراتي'
+                'en' => 'Mozambican',
+                'ar' => 'ជនជាតិម៉ូហ្សាំប៊ិក'
             ],
             [
-
-                'en'=> 'Moroccan',
-                'ar'=> 'مغربي'
+                'en' => 'Myanmarian',
+                'ar' => 'ជនជាតិមីយ៉ាន់ម៉ា'
             ],
             [
-
-                'en'=> 'Mozambican',
-                'ar'=> 'موزمبيقي'
+                'en' => 'Namibian',
+                'ar' => 'ជនជាតិណាមីប៊ី'
             ],
             [
-
-                'en'=> 'Myanmarian',
-                'ar'=> 'ميانماري'
+                'en' => 'Nauruan',
+                'ar' => 'ជនជាតិណូរូ'
             ],
             [
-
-                'en'=> 'Namibian',
-                'ar'=> 'ناميبي'
+                'en' => 'Nepalese',
+                'ar' => 'ជនជាតិនេប៉ាល់'
             ],
             [
-
-                'en'=> 'Nauruan',
-                'ar'=> 'نوري'
+                'en' => 'Dutch',
+                'ar' => 'ជនជាតិហូឡង់'
             ],
             [
-
-                'en'=> 'Nepalese',
-                'ar'=> 'نيبالي'
+                'en' => 'Dutch Antilier',
+                'ar' => 'ជនជាតិអង់ទីលហូឡង់'
             ],
             [
-
-                'en'=> 'Dutch',
-                'ar'=> 'هولندي'
+                'en' => 'New Caledonian',
+                'ar' => 'ជនជាតិកាលេដូនីថ្មី'
             ],
             [
-
-                'en'=> 'Dutch Antilier',
-                'ar'=> 'هولندي'
+                'en' => 'New Zealander',
+                'ar' => 'ជនជាតិនូវែលសេឡង់'
             ],
             [
-
-                'en'=> 'New Caledonian',
-                'ar'=> 'كاليدوني'
+                'en' => 'Nicaraguan',
+                'ar' => 'ជនជាតិនីការ៉ាហ្គា'
             ],
             [
-
-                'en'=> 'New Zealander',
-                'ar'=> 'نيوزيلندي'
+                'en' => 'Nigerien',
+                'ar' => 'ជនជាតិនីហ្សេ'
             ],
             [
-
-                'en'=> 'Nicaraguan',
-                'ar'=> 'نيكاراجوي'
+                'en' => 'Nigerian',
+                'ar' => 'ជនជាតិនីហ្សេរីយ៉ា'
             ],
             [
-
-                'en'=> 'Nigerien',
-                'ar'=> 'نيجيري'
+                'en' => 'Niuean',
+                'ar' => 'ជនជាតិនីវ'
             ],
             [
-
-                'en'=> 'Nigerian',
-                'ar'=> 'نيجيري'
+                'en' => 'Norfolk Islander',
+                'ar' => 'ជនជាតិកោះន័រហ្វក'
             ],
             [
-
-                'en'=> 'Niuean',
-                'ar'=> 'ني'
+                'en' => 'Northern Marianan',
+                'ar' => 'ជនជាតិម៉ារីអាណាខាងជើង'
             ],
             [
-
-                'en'=> 'Norfolk Islander',
-                'ar'=> 'نورفوليكي'
+                'en' => 'Norwegian',
+                'ar' => 'ជនជាតិន័រវែស'
             ],
             [
-
-                'en'=> 'Northern Marianan',
-                'ar'=> 'ماريني'
+                'en' => 'Omani',
+                'ar' => 'ជនជាតិអូម៉ង់'
             ],
             [
-
-                'en'=> 'Norwegian',
-                'ar'=> 'نرويجي'
+                'en' => 'Pakistani',
+                'ar' => 'ជនជាតិប៉ាគីស្ថាន'
             ],
             [
-
-                'en'=> 'Omani',
-                'ar'=> 'عماني'
+                'en' => 'Palauan',
+                'ar' => 'ជនជាតិប៉ាឡូ'
             ],
             [
-
-                'en'=> 'Pakistani',
-                'ar'=> 'باكستاني'
+                'en' => 'Palestinian',
+                'ar' => 'ជនជាតិប៉ាឡេស្ទីន'
             ],
             [
-
-                'en'=> 'Palauan',
-                'ar'=> 'بالاوي'
+                'en' => 'Panamanian',
+                'ar' => 'ជនជាតិប៉ាណាម៉ា'
             ],
             [
-
-                'en'=> 'Palestinian',
-                'ar'=> 'فلسطيني'
+                'en' => 'Papua New Guinean',
+                'ar' => 'ជនជាតិប៉ាពួញូហ្គីណេ'
             ],
             [
-
-                'en'=> 'Panamanian',
-                'ar'=> 'بنمي'
+                'en' => 'Paraguayan',
+                'ar' => 'ជនជាតិប៉ារ៉ាហ្គាយ'
             ],
             [
-
-                'en'=> 'Papua New Guinean',
-                'ar'=> 'بابوي'
+                'en' => 'Peruvian',
+                'ar' => 'ជនជាតិប៉េរូ'
             ],
             [
-
-                'en'=> 'Paraguayan',
-                'ar'=> 'بارغاوي'
+                'en' => 'Filipino',
+                'ar' => 'ជនជាតិហ្វីលីពីន'
             ],
             [
-
-                'en'=> 'Peruvian',
-                'ar'=> 'بيري'
+                'en' => 'Pitcairn Islander',
+                'ar' => 'ជនជាតិកោះពីតកែន'
             ],
             [
-
-                'en'=> 'Filipino',
-                'ar'=> 'فلبيني'
+                'en' => 'Polish',
+                'ar' => 'ជនជាតិប៉ូឡូញ'
             ],
             [
-
-                'en'=> 'Pitcairn Islander',
-                'ar'=> 'بيتكيرني'
+                'en' => 'Portuguese',
+                'ar' => 'ជនជាតិព័រទុយហ្គាល់'
             ],
             [
-
-                'en'=> 'Polish',
-                'ar'=> 'بوليني'
+                'en' => 'Puerto Rican',
+                'ar' => 'ជនជាតិព័រតូរីកូ'
             ],
             [
-
-                'en'=> 'Portuguese',
-                'ar'=> 'برتغالي'
+                'en' => 'Qatari',
+                'ar' => 'ជនជាតិកាតា'
             ],
             [
-
-                'en'=> 'Puerto Rican',
-                'ar'=> 'بورتي'
+                'en' => 'Reunionese',
+                'ar' => 'ជនជាតិរេអ៊ុនយ៉ុង'
             ],
             [
-
-                'en'=> 'Qatari',
-                'ar'=> 'قطري'
+                'en' => 'Romanian',
+                'ar' => 'ជនជាតិរ៉ូម៉ានី'
             ],
             [
-
-                'en'=> 'Reunionese',
-                'ar'=> 'ريونيوني'
+                'en' => 'Russian',
+                'ar' => 'ជនជាតិរុស្ស៊ី'
             ],
             [
-
-                'en'=> 'Romanian',
-                'ar'=> 'روماني'
+                'en' => 'Rwandan',
+                'ar' => 'ជនជាតិរវ៉ាន់ដា'
             ],
             [
-
-                'en'=> 'Russian',
-                'ar'=> 'روسي'
+                'en' => 'Kittitian/Nevisian',
+                'ar' => 'ជនជាតិគីតទីស/នេវីស'
             ],
             [
-
-                'en'=> 'Rwandan',
-                'ar'=> 'رواندا'
+                'en' => 'St. Martian(French)',
+                'ar' => 'ជនជាតិសាំងម៉ាទីន(បារាំង)'
             ],
             [
-
-                'en'=> '',
-                'ar'=> 'Kittitian/Nevisian'
+                'en' => 'St. Martian(Dutch)',
+                'ar' => 'ជនជាតិសាំងម៉ាទីន(ហូឡង់)'
             ],
             [
-
-                'en'=> 'St. Martian(French)',
-                'ar'=> 'ساينت مارتني فرنسي'
+                'en' => 'St. Pierre and Miquelon',
+                'ar' => 'ជនជាតិសាំងព្យែរនិងមីគេឡុង'
             ],
             [
-
-                'en'=> 'St. Martian(Dutch)',
-                'ar'=> 'ساينت مارتني هولندي'
+                'en' => 'Saint Vincent and the Grenadines',
+                'ar' => 'ជនជាតិសាំងវ៉ាំងសង់និងហ្គ្រេណាឌីន'
             ],
             [
-
-                'en'=> 'St. Pierre and Miquelon',
-                'ar'=> 'سان بيير وميكلوني'
+                'en' => 'Samoan',
+                'ar' => 'ជនជាតិសាម័រ'
             ],
             [
-
-                'en'=> 'Saint Vincent and the Grenadines',
-                'ar'=> 'سانت فنسنت وجزر غرينادين'
+                'en' => 'Sammarinese',
+                'ar' => 'ជនជាតិសានម៉ារីណូ'
             ],
             [
-
-                'en'=> 'Samoan',
-                'ar'=> 'ساموي'
+                'en' => 'Sao Tomean',
+                'ar' => 'ជនជាតិសៅតូម៉េ'
             ],
             [
-
-                'en'=> 'Sammarinese',
-                'ar'=> 'ماريني'
+                'en' => 'Saudi Arabian',
+                'ar' => 'ជនជាតិអារ៉ាប៊ីសាអូឌីត'
             ],
             [
-
-                'en'=> 'Sao Tomean',
-                'ar'=> 'ساو تومي وبرينسيبي'
+                'en' => 'Senegalese',
+                'ar' => 'ជនជាតិសេណេហ្គាល់'
             ],
             [
-
-                'en'=> 'Saudi Arabian',
-                'ar'=> 'سعودي'
+                'en' => 'Serbian',
+                'ar' => 'ជនជាតិស៊ែរប៊ី'
             ],
             [
-
-                'en'=> 'Senegalese',
-                'ar'=> 'سنغالي'
+                'en' => 'Seychellois',
+                'ar' => 'ជនជាតិសីស្ហែល'
             ],
             [
-
-                'en'=> 'Serbian',
-                'ar'=> 'صربي'
+                'en' => 'Sierra Leonean',
+                'ar' => 'ជនជាតិសៀរ៉ាឡេអូន'
             ],
             [
-
-                'en'=> 'Seychellois',
-                'ar'=> 'سيشيلي'
+                'en' => 'Singaporean',
+                'ar' => 'ជនជាតិសាំងហ្គាពួរ'
             ],
             [
-
-                'en'=> 'Sierra Leonean',
-                'ar'=> 'سيراليوني'
+                'en' => 'Slovak',
+                'ar' => 'ជនជាតិស្លូវ៉ាគី'
             ],
             [
-
-                'en'=> 'Singaporean',
-                'ar'=> 'سنغافوري'
+                'en' => 'Slovenian',
+                'ar' => 'ជនជាតិស្លូវេនី'
             ],
             [
-
-                'en'=> 'Slovak',
-                'ar'=> 'سولفاكي'
+                'en' => 'Solomon Island',
+                'ar' => 'ជនជាតិកោះសូឡូម៉ុន'
             ],
             [
-
-                'en'=> 'Slovenian',
-                'ar'=> 'سولفيني'
+                'en' => 'Somali',
+                'ar' => 'ជនជាតិសូម៉ាលី'
             ],
             [
-
-                'en'=> 'Solomon Island',
-                'ar'=> 'جزر سليمان'
+                'en' => 'South African',
+                'ar' => 'ជនជាតិអាហ្វ្រិកខាងត្បូង'
             ],
             [
-
-                'en'=> 'Somali',
-                'ar'=> 'صومالي'
+                'en' => 'South Georgia and the South Sandwich',
+                'ar' => 'ជនជាតិហ្សកហ្ស៊ីខាងត្បូងនិងកោះសាំងវ៉ិច'
             ],
             [
-
-                'en'=> 'South African',
-                'ar'=> 'أفريقي'
+                'en' => 'South Sudanese',
+                'ar' => 'ជនជាតិស៊ូដង់ខាងត្បូង'
             ],
             [
-
-                'en'=> 'South Georgia and the South Sandwich',
-                'ar'=> 'لمنطقة القطبية الجنوبية'
+                'en' => 'Spanish',
+                'ar' => 'ជនជាតិអេស្ប៉ាញ'
             ],
             [
-
-                'en'=> 'South Sudanese',
-                'ar'=> 'سوادني جنوبي'
+                'en' => 'St. Helenian',
+                'ar' => 'ជនជាតិសាំងហេឡេណា'
             ],
             [
-
-                'en'=> 'Spanish',
-                'ar'=> 'إسباني'
+                'en' => 'Sudanese',
+                'ar' => 'ជនជាតិស៊ូដង់'
             ],
             [
-
-                'en'=> 'St. Helenian',
-                'ar'=> 'هيلاني'
+                'en' => 'Surinamese',
+                'ar' => 'ជនជាតិស៊ូរីណាម'
             ],
             [
-
-                'en'=> 'Sudanese',
-                'ar'=> 'سوداني'
+                'en' => 'Svalbardian/Jan Mayenian',
+                'ar' => 'ជនជាតិស្វាលបាដនិងហ្សានម៉ាយេន'
             ],
             [
-
-                'en'=> 'Surinamese',
-                'ar'=> 'سورينامي'
+                'en' => 'Swazi',
+                'ar' => 'ជនជាតិស្វាហ្ស៊ី'
             ],
             [
-
-                'en'=> 'Svalbardian/Jan Mayenian',
-                'ar'=> 'سفالبارد ويان ماين'
+                'en' => 'Swedish',
+                'ar' => 'ជនជាតិស៊ុយអែត'
             ],
             [
-
-                'en'=> 'Swazi',
-                'ar'=> 'سوازيلندي'
+                'en' => 'Swiss',
+                'ar' => 'ជនជាតិស្វីស'
             ],
             [
-
-                'en'=> 'Swedish',
-                'ar'=> 'سويدي'
+                'en' => 'Syrian',
+                'ar' => 'ជនជាតិស៊ីរី'
             ],
             [
-
-                'en'=> 'Swiss',
-                'ar'=> 'سويسري'
+                'en' => 'Taiwanese',
+                'ar' => 'ជនជាតិតៃវ៉ាន់'
             ],
             [
-
-                'en'=> 'Syrian',
-                'ar'=> 'سوري'
+                'en' => 'Tajikistani',
+                'ar' => 'ជនជាតិតាជីគីស្ថាន'
             ],
             [
-
-                'en'=> 'Taiwanese',
-                'ar'=> 'تايواني'
+                'en' => 'Tanzanian',
+                'ar' => 'ជនជាតិតង់ហ្សានី'
             ],
             [
-
-                'en'=> 'Tajikistani',
-                'ar'=> 'طاجيكستاني'
+                'en' => 'Thai',
+                'ar' => 'ជនជាតិថៃ'
             ],
             [
-
-                'en'=> 'Tanzanian',
-                'ar'=> 'تنزانيي'
+                'en' => 'Timor-Lestian',
+                'ar' => 'ជនជាតិទីម័រខាងកើត'
             ],
             [
-
-                'en'=> 'Thai',
-                'ar'=> 'تايلندي'
+                'en' => 'Togolese',
+                'ar' => 'ជនជាតិតូហ្គោ'
             ],
             [
-
-                'en'=> 'Timor-Lestian',
-                'ar'=> 'تيموري'
+                'en' => 'Tokelaian',
+                'ar' => 'ជនជាតិតូកេឡាវ'
             ],
             [
-
-                'en'=> 'Togolese',
-                'ar'=> 'توغي'
+                'en' => 'Tongan',
+                'ar' => 'ជនជាតិតុងហ្គា'
             ],
             [
-
-                'en'=> 'Tokelaian',
-                'ar'=> 'توكيلاوي'
+                'en' => 'Trinidadian/Tobagonian',
+                'ar' => 'ជនជាតិទ្រីនីដាដនិងតូបាហ្គោ'
             ],
             [
-
-                'en'=> 'Tongan',
-                'ar'=> 'تونغي'
+                'en' => 'Tunisian',
+                'ar' => 'ជនជាតិទុយនីស៊ី'
             ],
             [
-
-                'en'=> 'Trinidadian/Tobagonian',
-                'ar'=> 'ترينيداد وتوباغو'
+                'en' => 'Turkish',
+                'ar' => 'ជនជាតិទួរគី'
             ],
             [
-
-                'en'=> 'Tunisian',
-                'ar'=> 'تونسي'
+                'en' => 'Turaren',
+                'ar' => 'ជនជាតិទួរមិនីស្ថាន'
             ],
             [
-
-                'en'=> 'Turkish',
-                'ar'=> 'تركي'
+                'en' => 'Turks and Caicos Islands',
+                'ar' => 'ជនជាតិកោះទួរកនិងកៃកូស'
             ],
             [
-
-                'en'=> 'Turkmen',
-                'ar'=> 'تركمانستاني'
+                'en' => 'Tuvaluan',
+                'ar' => 'ជនជាតិទូវ៉ាលូ'
             ],
             [
-
-                'en'=> 'Turks and Caicos Islands',
-                'ar'=> 'جزر توركس وكايكوس'
+                'en' => 'Ugandan',
+                'ar' => 'ជនជាតិអ៊ូហ្គង់ដា'
             ],
             [
-
-                'en'=> 'Tuvaluan',
-                'ar'=> 'توفالي'
+                'en' => 'Ukrainian',
+                'ar' => 'ជនជាតិអ៊ុយក្រែន'
             ],
             [
-
-                'en'=> 'Ugandan',
-                'ar'=> 'أوغندي'
+                'en' => 'Emirati',
+                'ar' => 'ជនជាតិអេមីរ៉ាត'
             ],
             [
-
-                'en'=> 'Ukrainian',
-                'ar'=> 'أوكراني'
+                'en' => 'British',
+                'ar' => 'ជនជាតិអង់គ្លេស'
             ],
             [
-
-                'en'=> 'Emirati',
-                'ar'=> 'إماراتي'
+                'en' => 'American',
+                'ar' => 'ជនជាតិអាមេរិក'
             ],
             [
-
-                'en'=> 'British',
-                'ar'=> 'بريطاني'
+                'en' => 'US Minor Outlying Islander',
+                'ar' => 'ជនជាតិកោះតូចខាងក្រៅអាមេរិក'
             ],
             [
-
-                'en'=> 'American',
-                'ar'=> 'أمريكي'
+                'en' => 'Uruguayan',
+                'ar' => 'ជនជាតិអ៊ុយរុយហ្គាយ'
             ],
             [
-
-                'en'=> 'US Minor Outlying Islander',
-                'ar'=> 'أمريكي'
+                'en' => 'Uzbek',
+                'ar' => 'ជនជាតិអ៊ុយបេគីស្ថាន'
             ],
             [
-
-                'en'=> 'Uruguayan',
-                'ar'=> 'أورغواي'
+                'en' => 'Vanuatuan',
+                'ar' => 'ជនជាតិវ៉ានូអាទូ'
             ],
             [
-
-                'en'=> 'Uzbek',
-                'ar'=> 'أوزباكستاني'
+                'en' => 'Venezuelan',
+                'ar' => 'ជនជាតិវ៉េណេហ្ស៊ុយអេឡា'
             ],
             [
-
-                'en'=> 'Vanuatuan',
-                'ar'=> 'فانواتي'
+                'en' => 'Vietnamese',
+                'ar' => 'ជនជាតិវៀតណាម'
             ],
             [
-
-                'en'=> 'Venezuelan',
-                'ar'=> 'فنزويلي'
+                'en' => 'American Virgin Islander',
+                'ar' => 'ជនជាតិកោះវឺជីនអាមេរិក'
             ],
             [
-
-                'en'=> 'Vietnamese',
-                'ar'=> 'فيتنامي'
+                'en' => 'Vatican',
+                'ar' => 'ជនជាតិវ៉ាទីកង់'
             ],
             [
-
-                'en'=> 'American Virgin Islander',
-                'ar'=> 'أمريكي'
+                'en' => 'Wallisian/Futunan',
+                'ar' => 'ជនជាតិវ៉ាលីសនិងហ៊្វុយទុនា'
             ],
             [
-
-                'en'=> 'Vatican',
-                'ar'=> 'فاتيكاني'
+                'en' => 'Sahrawian',
+                'ar' => 'ជនជាតិសាហារ៉ាវី'
             ],
             [
-
-                'en'=> 'Wallisian/Futunan',
-                'ar'=> 'فوتوني'
+                'en' => 'Yemeni',
+                'ar' => 'ជនជាតិយេម៉ែន'
             ],
             [
-
-                'en'=> 'Sahrawian',
-                'ar'=> 'صحراوي'
+                'en' => 'Zambian',
+                'ar' => 'ជនជាតិហ្សំប៊ី'
             ],
             [
-
-                'en'=> 'Yemeni',
-                'ar'=> 'يمني'
-            ],
-            [
-
-                'en'=> 'Zambian',
-                'ar'=> 'زامبياني'
-            ],
-            [
-
-                'en'=> 'Zimbabwean',
-                'ar'=> 'زمبابوي'
+                'en' => 'Zimbabwean',
+                'ar' => 'ជនជាតិហ្ស៊ីមបាវ៉េ'
             ]
         ];
 
-        foreach ($nationals as $n)
-        {
+        foreach ($nationals as $n) {
             Nationalitie::create(['name' => $n]);
         }
     }

@@ -1,7 +1,3 @@
-
-
-
-
 @extends('layouts.master')
 
 @section('Pagetitle',"Registration")
@@ -12,28 +8,39 @@
         body * {
             visibility: hidden;
         }
-        #print-content, #print-content * {
+
+        #print-content,
+        #print-content * {
             visibility: visible;
         }
+
         #print-content {
             position: absolute;
             top: 0;
-            {{ str_replace('_', '-', app()->getLocale()) == "ar" ? "right":'left'}}:0;
+
+                {
+                    {
+                    str_replace('_', '-', app()->getLocale())=="ar" ? "right": 'left'
+                }
+            }
+
+            :0;
             width: 100vw;
             height: 100vh;
         }
-        #print-btn
-        {
+
+        #print-btn {
             visibility: hidden;
         }
-        #print-icon
-        {
+
+        #print-icon {
             visibility: hidden;
         }
+
         .two-columns-print {
-        column-count: 2;
-        column-gap: 1rem;
-    }
+            column-count: 2;
+            column-gap: 1rem;
+        }
     }
 </style>
 
@@ -43,30 +50,31 @@
 
 <livewire:add-user>
 
-@endsection
+    @endsection
 
-@section('scripts')
+    @section('scripts')
 
-{{-- Import Search Users and add user_id inside hidden input --}}
-<script type="module">
+    {{-- Import Search Users and add user_id inside hidden input --}}
+    <script type="module">
+        import {
+            setupSearchParents
+        } from "{{ asset('search.js') }}";
 
-    import { setupSearchParents } from "{{ asset('search.js') }}";
+        // Get the input elements
+        Livewire.on('parentSearched', function() {
+            let searchInput = document.getElementById('search_parent');
+            let userIdInput = document.getElementById('parent_id');
 
-    // Get the input elements
-    Livewire.on('parentSearched', function() {
-        let searchInput = document.getElementById('search_parent');
-        let userIdInput = document.getElementById('parent_id');
-
-        // Add Search for Users Function
-        setupSearchParents(searchInput, userIdInput);
-    });
-</script>
+            // Add Search for Users Function
+            setupSearchParents(searchInput, userIdInput);
+        });
+    </script>
 
 
-<script>
-    window.addEventListener('print', function () {
-        window.print();
-    });
-</script>
+    <script>
+        window.addEventListener('print', function() {
+            window.print();
+        });
+    </script>
 
-@endsection
+    @endsection

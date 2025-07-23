@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Religion;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -14,29 +13,26 @@ class ReligionTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-
+        // Clear the religions table before seeding
         DB::table('religions')->delete();
 
         $religions = [
-
             [
-                'en'=> 'Muslim',
-                'ar'=> 'مسلم'
+                'en' => 'Muslim',
+                'ar' => 'មូស្លីម',
             ],
             [
-                'en'=> 'Christian',
-                'ar'=> 'مسيحي'
+                'en' => 'Christian',
+                'ar' => 'គ្រិស្តសាសនា',
             ],
             [
-                'en'=> 'Other',
-                'ar'=> 'غيرذلك'
+                'en' => 'Other',
+                'ar' => 'ផ្សេងទៀត',
             ],
-
         ];
 
-        foreach ($religions as $R) {
-            Religion::create(['name' => $R]);
+        foreach ($religions as $religion) {
+            Religion::create(['name' => $religion]);
         }
     }
 }

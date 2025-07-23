@@ -4,19 +4,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Language Lines
+    | Password Reset Language Lines (Khmer)
     |--------------------------------------------------------------------------
     |
-    | The following language lines are the default lines which match reasons
-    | that are given by the password broker for a password update attempt
-    | has failed, such as for an invalid token or invalid new password.
+    | These lines correspond to password reset messages shown to users.
     |
     */
 
-    'reset' => 'تمت إعادة تعيين كلمة المرور',
-    'sent' => 'تم إرسال تفاصيل استعادة كلمة المرور الخاصة بك إلى بريدك الإلكتروني',
-    'throttled' => 'الرجاء الانتظار قبل إعادة المحاولة',
-    'token' => 'رمز استعادة كلمة المرور هذا غير صالح',
-    'user' => "لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني",
+    'reset' => 'ពាក្យសម្ងាត់របស់អ្នកត្រូវបានកំណត់ឡើងវិញដោយជោគជ័យ',
+    'sent' => 'ព័ត៌មានស្តារពាក្យសម្ងាត់ត្រូវបានផ្ញើទៅអ៊ីមែលរបស់អ្នករួចហើយ',
+    'throttled' => 'សូមរងចាំមុនពេលព្យាយាមម្ដងទៀត',
+    'token' => 'កូដសម្រាប់កំណត់ពាក្យសម្ងាត់នេះមិនត្រឹមត្រូវទេ',
+    'user' => 'រកមិនឃើញអ្នកប្រើប្រាស់ដែលមានអ៊ីមែលនោះទេ',
 
 ];

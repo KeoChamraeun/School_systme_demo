@@ -18,15 +18,12 @@ class GenderSeeder extends Seeder
         DB::table('genders')->delete();
 
         $genders = [
-            ['en'=> 'Male', 'ar'=> 'ذكر'],
-            ['en'=> 'Female', 'ar'=> 'انثي'],
+            ['en' => 'Male', 'ar' => 'ប្រុស'],
+            ['en' => 'Female', 'ar' => 'ស្រី'],
         ];
 
-        foreach ($genders as $gender)
-        {
+        foreach ($genders as $gender) {
             Gender::create(['name' => $gender]);
         };
-
-
     }
 }
