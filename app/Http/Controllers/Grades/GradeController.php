@@ -24,51 +24,44 @@ class GradeController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request): RedirectResponse
-    {
-
-
-    }
+    public function create(Request $request): RedirectResponse {}
 
     /*
 
      */
 
 
-        public function store(Request $request): RedirectResponse
-        {
-            if(Grade::where('name->ar',$request->name_ar)->orWhere ('name->en',$request->name_en)->exists() == False)
-            {
-                //Create New Grade and Validate the data
-                $newgrade = $request->validate([
-                    'name_en'=>'required',
-                    'name_ar'=>'required',
-                    'notes'=>'nullable'
+    public function store(Request $request): RedirectResponse
+    {
+        if (Grade::where('name->ar', $request->name_ar)->orWhere('name->en', $request->name_en)->exists() == False) {
+            //Create New Grade and Validate the data
+            $newgrade = $request->validate([
+                'name_en' => 'required',
+                'name_ar' => 'required',
+                'notes' => 'nullable'
+            ]);
+
+            // If validation passed, create a new grade and save it to the database
+            if ($newgrade) {
+                Grade::create([
+                    'name' =>
+                    [
+                        'en' => $request->name_en,
+                        'ar' => $request->name_ar,
+                    ],
+                    'notes' => $request->notes,
                 ]);
 
-                // If validation passed, create a new grade and save it to the database
-                if($newgrade)
-                {
-                    Grade::create([
-                        'name'=>
-                            [
-                                'en'=> $request->name_en,
-                                'ar'=> $request->name_ar,
-                            ],
-                        'notes'=> $request->notes,
-                    ]);
+                // Redirect to the 'grade' page with a success message
+                return Redirect::route('grade')->with('success', trans('alert.createdgrade'));
+            }
+            // If validation failed, redirect to the 'grade' page with an error message
+            return Redirect::route('grade')->with('error', trans('alert.error'));
+        };
 
-                    // Redirect to the 'grade' page with a success message
-                    return Redirect::route('grade')->with('success', trans('alert.createdgrade'));
-                }
-                    // If validation failed, redirect to the 'grade' page with an error message
-                    return Redirect::route('grade')->with('error', trans('alert.error'));
-            };
-
-                // If the name* exists on grade table, redirect to the 'grade' page with an exists error message
-                return Redirect::route('grade')->with('error', trans('alert.exists-error'));
-
-        }
+        // If the name* exists on grade table, redirect to the 'grade' page with an exists error message
+        return Redirect::route('grade')->with('error', trans('alert.exists-error'));
+    }
 
 
     /**
@@ -118,15 +111,13 @@ class GradeController extends Controller
         $deletegrade = Grade::destroy($id);
 
         // If the grade was successfully deleted...
-        if($deletegrade)
-        {
+        if ($deletegrade) {
             // Return a redirect to the grade route with a success message in the session
-            return Redirect::route('grade')->with('success',trans('alert.deletedgrade'));
+            return Redirect::route('grade')->with('success', trans('alert.deletedgrade'));
         }
 
         // If the grade was not successfully deleted...
         // Return a redirect to the grade route with an error message in the session
         return Redirect::route('grade')->with('error', trans('alert.error'));
     }
-
 }

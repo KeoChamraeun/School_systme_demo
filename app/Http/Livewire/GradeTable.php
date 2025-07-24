@@ -39,10 +39,10 @@ final class GradeTable extends PowerGridComponent
         return [
 
             Header::make()->showSearchInput()
-            ->showToggleColumns(),
-            Footer::make()
-                ->showPerPage()
-                ->showRecordCount(),
+                ->showToggleColumns(),
+            // Footer::make()
+            //     ->showPerPage()
+            //     ->showRecordCount(),
         ];
     }
 
@@ -55,10 +55,10 @@ final class GradeTable extends PowerGridComponent
     */
 
     /**
-    * PowerGrid datasource.
-    *
-    * @return Builder<\App\Models\grade>
-    */
+     * PowerGrid datasource.
+     *
+     * @return Builder<\App\Models\grade>
+     */
     public function datasource(): Builder
     {
         return grade::query();
@@ -99,14 +99,14 @@ final class GradeTable extends PowerGridComponent
             ->addColumn('id')
             ->addColumn('name')
 
-           /** Example of custom column using a closure **/
+            /** Example of custom column using a closure **/
             ->addColumn('name_lower', function (grade $model) {
                 return strtolower(e($model->name));
             })
 
-            ->addColumn('notes',fn(grade $model) => Str::words(e($model ->notes)))
-            ->addColumn('created_at_formatted', fn (grade $model) => Carbon::parse($model->created_at)->format('d-m-Y'))
-            ->addColumn('updated_at_formatted', fn (grade $model) => Carbon::parse($model->updated_at)->diffForHumans());
+            ->addColumn('notes', fn(grade $model) => Str::words(e($model->notes)))
+            ->addColumn('created_at_formatted', fn(grade $model) => Carbon::parse($model->created_at)->format('d-m-Y'))
+            ->addColumn('updated_at_formatted', fn(grade $model) => Carbon::parse($model->updated_at)->diffForHumans());
     }
 
     /*
@@ -128,39 +128,38 @@ final class GradeTable extends PowerGridComponent
         return [
 
             Column::make('ID', 'id')
-                ->makeInputRange()
-                ->hidden(true,false)
+                // ->makeInputRange()
+                // ->hidden(true, false)
                 ->withCount("Num"),
 
 
             Column::make('NAME', 'name')
                 ->sortable()
                 ->searchable()
-                ->makeInputText()
+                // ->makeInputText()
                 ->editOnClick(),
 
             Column::make('NOTES', 'notes')
                 ->sortable()
                 ->searchable()
-                ->makeInputText()
+                // ->makeInputText()
                 ->editOnClick(),
 
 
             Column::make('CREATED AT', 'created_at_formatted', 'created_at')
                 ->searchable()
-                ->sortable()
-                ->makeInputDatePicker()
-                ->hidden(true,false),
+                ->sortable(),
+            // ->makeInputDatePicker(),
+            // ->hidden(true, false),
 
             Column::make('UPDATED AT', 'updated_at_formatted', 'updated_at')
                 ->searchable()
                 ->sortable()
-                ->makeInputDatePicker()
-                ->hidden(true,false),
+            // ->makeInputDatePicker()
+            // ->hidden(true, false),
 
 
-        ]
-;
+        ];
     }
 
     public function header(): array
@@ -175,9 +174,11 @@ final class GradeTable extends PowerGridComponent
     protected function getListeners()
     {
         return array_merge(
-            parent::getListeners(), [
+            parent::getListeners(),
+            [
                 'bulkDeleteAllEvent',
-            ]);
+            ]
+        );
     }
 
 
@@ -191,7 +192,7 @@ final class GradeTable extends PowerGridComponent
         // If no grades were selected, show an error message and redirect to the grade page
         if (count($selectedIds) == 0) {
             // $this->dispatchBrowserEvent('showAlert', ['message' => trans('alert.errorselect')]);
-            return Redirect::route('grade')->with("error",trans('alert.errorselect'));
+            return Redirect::route('grade')->with("error", trans('alert.errorselect'));
         }
 
         // Initialize an array to store the IDs of the grades that can be deleted
@@ -218,8 +219,7 @@ final class GradeTable extends PowerGridComponent
             Grade::destroy($idsToDelete);
 
             // Check if there is Selected Grades with Classrooms
-            if(!empty($namesOfGradesWithClassrooms))
-            {
+            if (!empty($namesOfGradesWithClassrooms)) {
                 // Return Success message with Error message if there is some grades deleted and some are not.
                 $errorMsg = trans('alert.cantdeletedgrades') . ': ' . $namesOfGradesWithClassrooms;
                 return Redirect::route('grade')->with('success', trans('alert.deletedselected'))->with('error', $errorMsg);
@@ -259,10 +259,10 @@ final class GradeTable extends PowerGridComponent
     public function actions(): array
     {
         return [
-        //    Button::make('edit', 'Edit')
-        //        ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-        //        ->route('grade.edit',['id'])
-        //        ->openModal(),
+            //    Button::make('edit', 'Edit')
+            //        ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
+            //        ->route('grade.edit',['id'])
+            //        ->openModal(),
             Button::make('destroy', 'Delete')
                 ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm ')
                 ->target('_self')
@@ -282,7 +282,7 @@ final class GradeTable extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid grade Action Rules.
      *
      * @return array<int, RuleActions>
@@ -302,20 +302,19 @@ final class GradeTable extends PowerGridComponent
 
 
     public function onUpdatedEditable(string $id, string $field, string $value): void
-{
-    try {
-    $updated = grade::query()->findOrFail($id)->update([
-        $field => $value,
-    ]);} catch (QueryException $exception) {
+    {
+        try {
+            $updated = grade::query()->findOrFail($id)->update([
+                $field => $value,
+            ]);
+        } catch (QueryException $exception) {
 
-        $updated = false;
+            $updated = false;
+        }
+
+        // Reload data after a successful update
+        if ($updated) {
+            $this->fillData($updated);
+        }
     }
-
-    // Reload data after a successful update
-    if ($updated) {
-        $this->fillData($updated);
-    }
-
-}
-
 }

@@ -24,7 +24,7 @@ class AdminUserSeeder extends Seeder
 
     public function run()
     {
-        $defualtAdmin='admin@admin.com';
+        $defualtAdmin='keochamraeun54@gmail.com';
         $adminusersexists= User::where('email', $defualtAdmin)->first();
 
         if(!$adminusersexists){
@@ -32,7 +32,7 @@ class AdminUserSeeder extends Seeder
                 [
                     'name' => 'Admin',
                     'email' => $defualtAdmin,
-                    'password' => Hash::make('123456789@#'),
+                    'password' => Hash::make('12345678'),
                 ],
                 [
                     'name' => 'Mohamed Sheta',
