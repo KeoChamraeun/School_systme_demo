@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use OpenAI;
+use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
 
 class ChatBot extends Component
@@ -44,7 +44,7 @@ class ChatBot extends Component
                 'timestamp' => now()->toDateTimeString(),
             ];
         } catch (\Exception $e) {
-            Log::error('OpenAI Error: ' . $e->getMessage());
+            Log::error('Google Gemini API Error: ' . $e->getMessage());
             $this->messages[] = [
                 'text' => "⚠️ Error: " . $e->getMessage(),
                 'type' => 'bot',
@@ -56,26 +56,34 @@ class ChatBot extends Component
         $this->currentMessage = '';
     }
 
-    private function getAiResponse($message)
+    private function getAiResponse(string $message): string
     {
         $apiKey = env('GOOGLE_CLOUD_API_KEY');
 
         if (empty($apiKey)) {
-            throw new \Exception("Missing OpenAI API Key.");
+            throw new \Exception("Missing Google Cloud API Key.");
         }
 
-        $client = OpenAI::client($apiKey);
+        $client = new Client();
 
-        $response = $client->chat()->create([
-            'model' => 'gpt-3.5-turbo',
-            'messages' => [
-                ['role' => 'system', 'content' => 'You are a helpful school assistant.'],
-                ['role' => 'user', 'content' => $message]
-            ],
+        $url = "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key={$apiKey}";
+
+        $payload = [
+            'prompt' => ['text' => $message],
             'temperature' => 0.7,
+            'maxTokens' => 256,
+        ];
+
+        $response = $client->post($url, [
+            'json' => $payload,
+            'headers' => [
+                'Content-Type' => 'application/json',
+            ],
         ]);
 
-        return $response->choices[0]->message->content;
+        $body = json_decode($response->getBody()->getContents(), true);
+
+        return $body['candidates'][0]['output'] ?? 'No response from Gemini API';
     }
 
     public function render()
