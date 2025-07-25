@@ -38,10 +38,10 @@
             @foreach ($messages as $message)
             <div
                 style="margin-bottom: 10px; text-align: {{ $message['type'] === 'user' ? 'right' : 'left' }};">
-                <div
-                    style="display: inline-block; background: {{ $message['type'] === 'user' ? '#DCF8C6' : '#F1F0F0' }}; padding: 8px 12px; border-radius: 15px; max-width: 80%;">
+                <div style="display: inline-block; background: {{ $message['type'] === 'user' ? '#DCF8C6' : '#F1F0F0' }}; padding: 8px 12px; border-radius: 15px; max-width: 80%; text-align: left;">
                     {{ $message['text'] }}
                 </div>
+
                 <div style="font-size: 10px; color: #888;">
                     {{ \Carbon\Carbon::parse($message['timestamp'])->diffForHumans() }}
                 </div>
