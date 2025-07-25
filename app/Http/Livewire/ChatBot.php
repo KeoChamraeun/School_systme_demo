@@ -58,7 +58,7 @@ class ChatBot extends Component
 
     private function getAiResponse($message)
     {
-        $apiKey = env('OPENAI_API_KEY');
+        $apiKey = env('GOOGLE_CLOUD_API_KEY');
 
         if (empty($apiKey)) {
             throw new \Exception("Missing OpenAI API Key.");
