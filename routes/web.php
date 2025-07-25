@@ -248,10 +248,17 @@ Route::middleware([
                     Route::post('meetings/create', [OnlineClassController::class, 'createOnlineClass'])->name('meetings.store');
                     Route::delete('meetings/delete', [OnlineClassController::class, "deleteSelected"])->name('meetings.selected.destroy');
                 });
+
+                // Exams routes now here for Admin and Teacher roles
+                Route::group(['namespace' => "exams"], function () {
+                    Route::get('exams', [ExamController::class, 'index'])->name('exams.index');
+                    Route::get('exams/create', [ExamController::class, 'viewCreateExam'])->name('exams.create');
+                    Route::delete('exams/delete', [ExamController::class, 'deleteSelected'])->name('exams.selected.destroy');
+                });
+
             });
 
             Route::middleware(['auth', 'checkRole:Teacher'])->group(function () {
-
                 Route::group(['namespace' => "Teachers"], function () {
                     Route::get('teacher/classrooms', [TeacherClassroomController::class, "viewTeacherClassrooms"])->name('teacher.classrooms');
                 });
