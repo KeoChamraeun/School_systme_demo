@@ -33,6 +33,10 @@
                 @livewire('chat-bot')
 
             </div>
+            <div class="mx-auto sm:px-6 lg:px-8">
+                @livewire('chat-bot')
+
+            </div>
         </div>
 
         {{-- Footer --}}
