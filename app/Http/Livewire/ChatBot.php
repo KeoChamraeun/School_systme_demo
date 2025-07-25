@@ -37,16 +37,15 @@ class ChatBot extends Component
 
         try {
             $response = $this->getAiResponse($this->currentMessage);
-
             $this->messages[] = [
                 'text' => $response,
                 'type' => 'bot',
                 'timestamp' => now()->toDateTimeString(),
             ];
         } catch (\Exception $e) {
-            Log::error('Google Gemini API Error: ' . $e->getMessage());
+            Log::error('Google Generative AI Error: ' . $e->getMessage());
             $this->messages[] = [
-                'text' => "⚠️ Error: " . $e->getMessage(),
+                'text' => 'Sorry, the AI service is unavailable. Please try again later.',
                 'type' => 'bot',
                 'timestamp' => now()->toDateTimeString(),
             ];
@@ -61,29 +60,45 @@ class ChatBot extends Component
         $apiKey = env('GOOGLE_CLOUD_API_KEY');
 
         if (empty($apiKey)) {
-            throw new \Exception("Missing Google Cloud API Key.");
+            throw new \Exception('Missing Google Cloud API Key.');
         }
 
         $client = new Client();
 
-        $url = "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key={$apiKey}";
+        // Updated endpoint for Generative Language API (as of 2025, verify with Google documentation)
+        $url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={$apiKey}";
 
         $payload = [
-            'prompt' => ['text' => $message],
-            'temperature' => 0.7,
-            'maxTokens' => 256,
+            'contents' => [
+                [
+                    'parts' => [
+                        ['text' => $message]
+                    ]
+                ]
+            ],
+            'generationConfig' => [
+                'temperature' => 0.7,
+                'maxOutputTokens' => 256,
+            ],
         ];
 
-        $response = $client->post($url, [
-            'json' => $payload,
-            'headers' => [
-                'Content-Type' => 'application/json',
-            ],
-        ]);
+        try {
+            $response = $client->post($url, [
+                'json' => $payload,
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                ],
+            ]);
 
-        $body = json_decode($response->getBody()->getContents(), true);
+            $body = json_decode($response->getBody()->getContents(), true);
+            Log::debug('Google Generative AI Response: ', $body);
 
-        return $body['candidates'][0]['output'] ?? 'No response from Gemini API';
+            // Adjust based on the response structure for gemini-1.5-flash
+            return $body['candidates'][0]['content']['parts'][0]['text'] ?? 'No response from Generative AI';
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
+            Log::error('Google Generative AI Request Failed: ' . $e->getMessage());
+            throw $e;
+        }
     }
 
     public function render()

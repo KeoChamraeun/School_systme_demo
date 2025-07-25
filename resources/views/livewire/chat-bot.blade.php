@@ -9,7 +9,7 @@
         <!-- Header -->
         <div style="background: #4CAF50; color: white; padding: 10px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
             <span>SchoolSys Assistant</span>
-            <button @click="showChat = false" style="background: transparent; border: none; color: white; font-size: 20px; cursor: pointer;">&times;</button>
+            <button @click="showChat = false" style="background: transparent; border: none; color: white; font-size: 20px; cursor: pointer;">×</button>
         </div>
 
         <!-- Messages -->
