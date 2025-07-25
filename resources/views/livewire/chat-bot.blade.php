@@ -12,7 +12,7 @@
             });
         }
     }"
-    style="position: fixed; bottom: 20px; right: 20px; width: 350px; font-family: Arial, sans-serif;">
+    style="position: fixed; bottom: 20px; right: 20px; width: 350px; font-family: Arial, sans-serif; z-index: 9999;">
 
     <!-- Chat Toggle Button -->
     <button @click="showChat = !showChat" class="chat-toggle"

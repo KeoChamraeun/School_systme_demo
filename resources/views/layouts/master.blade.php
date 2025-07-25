@@ -1,5 +1,3 @@
-</html>
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -8,7 +6,6 @@
     <meta name="locale" content="{{ str_replace('_', '-', app()->getLocale()) }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name') }} - @yield('Pagetitle', 'Dashboard')</title>
 
     {{-- Include your CSS/JS links --}}
@@ -30,12 +27,9 @@
         <div class="py-12">
             <div class="mx-auto sm:px-6 lg:px-8">
                 @yield('Content')
-                @livewire('chat-bot')
 
-            </div>
-            <div class="mx-auto sm:px-6 lg:px-8">
+                {{-- Only include the chat-bot Livewire component once --}}
                 @livewire('chat-bot')
-
             </div>
         </div>
 
