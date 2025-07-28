@@ -24,35 +24,15 @@ class AdminUserSeeder extends Seeder
 
     public function run()
     {
-        $defualtAdmin='keochamraeun54@gmail.com';
-        $adminusersexists= User::where('email', $defualtAdmin)->first();
+        $defualtAdmin = 'keochamraeun54@gmail.com';
+        $adminusersexists = User::where('email', $defualtAdmin)->first();
 
-        if(!$adminusersexists){
+        if (!$adminusersexists) {
             $admins = [
                 [
                     'name' => 'Admin',
                     'email' => $defualtAdmin,
                     'password' => Hash::make('12345678'),
-                ],
-                [
-                    'name' => 'Mohamed Sheta',
-                    'email' => 'sheta@admin.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Adham Tamer',
-                    'email' => 'adham@admin.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Eman',
-                    'email' => 'eman@admin.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Khaled',
-                    'email' => 'khaled@admin.com',
-                    'password' => Hash::make('123456789@#'),
                 ],
             ];
 
@@ -68,35 +48,14 @@ class AdminUserSeeder extends Seeder
 
 
 
-        $defualtTeacher='teacher@test.com';
-        $teacherusersexists= User::where('email', $defualtTeacher)->first();
+        $defualtTeacher = 'teacher@test.com';
+        $teacherusersexists = User::where('email', $defualtTeacher)->first();
 
-        if(!$teacherusersexists)
-        {
+        if (!$teacherusersexists) {
             $teachers = [
                 [
                     'name' => 'Teacher Test',
                     'email' => $defualtTeacher,
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Mohamed Sheta Teacher',
-                    'email' => 'sheta@teacher.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Adham Tamer Teacher',
-                    'email' => 'adham@teacher.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Eman Teacher',
-                    'email' => 'eman@teacher.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Khaled Teacher',
-                    'email' => 'khaled@teacher.com',
                     'password' => Hash::make('123456789@#'),
                 ],
             ];
@@ -108,39 +67,17 @@ class AdminUserSeeder extends Seeder
                 $user = User::create($teacher);
                 $user->roles()->attach($teacherRole);
             }
-
         }
 
 
-        $defualtParent='parent@test.com';
-        $parentusersexists= User::where('email', $defualtParent)->first();
+        $defualtParent = 'parent@test.com';
+        $parentusersexists = User::where('email', $defualtParent)->first();
 
-        if(!$teacherusersexists)
-        {
+        if (!$teacherusersexists) {
             $Parents = [
                 [
                     'name' => 'Parent Test',
                     'email' => $defualtParent,
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Mohamed Sheta Parent',
-                    'email' => 'sheta@parent.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Adham Tamer Parent',
-                    'email' => 'adham@parent.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Eman Parent',
-                    'email' => 'eman@parent.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Khaled Parent',
-                    'email' => 'khaled@parent.com',
                     'password' => Hash::make('123456789@#'),
                 ],
             ];
@@ -151,40 +88,18 @@ class AdminUserSeeder extends Seeder
             foreach ($Parents as $Parent) {
                 $user = User::create($Parent);
                 $user->roles()->attach($ParentRole);
-                MyParent::create(["user_id"=>$user->id]);
+                MyParent::create(["user_id" => $user->id]);
             }
-
         }
 
-        $defualtStudent='student@test.com';
-        $studentusersexists= User::where('email', $defualtStudent)->first();
+        $defualtStudent = 'student@test.com';
+        $studentusersexists = User::where('email', $defualtStudent)->first();
 
-        if(!$studentusersexists)
-        {
+        if (!$studentusersexists) {
             $students = [
                 [
                     'name' => 'Student Test',
                     'email' => $defualtStudent,
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Mohamed Sheta Student',
-                    'email' => 'sheta@student.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Adham Tamer Student',
-                    'email' => 'adham@student.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Eman Student',
-                    'email' => 'eman@student.com',
-                    'password' => Hash::make('123456789@#'),
-                ],
-                [
-                    'name' => 'Khaled Student',
-                    'email' => 'khaled@student.com',
                     'password' => Hash::make('123456789@#'),
                 ],
             ];
@@ -219,11 +134,7 @@ class AdminUserSeeder extends Seeder
                 $student1->religion_id = $religion->id;
                 $student1->academic_year = '2022/2023';
                 $student1->save();
-
             }
-
         }
-
-
     }
 }
