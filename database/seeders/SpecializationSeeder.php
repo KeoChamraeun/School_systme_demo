@@ -16,10 +16,17 @@ class SpecializationSeeder extends Seeder
     {
         DB::table('specializations')->delete();
         $specializations = [
-            ['en' => 'Khmer', 'ar' => 'Khmer'],
-            ['en' => 'Sciences', 'ar' => 'វិទ្យាសាស្ត្រ'],
+            ['en' => 'Khmer Literature', 'ar' => 'អក្សរសាស្ត្រខ្មែរ'],
             ['en' => 'Computer', 'ar' => 'កុំព្យូទ័រ'],
             ['en' => 'English', 'ar' => 'អង់គ្លេស'],
+            ['en' => 'Mathematics', 'ar' => 'គណិតវិទ្យា'],
+            ['en' => 'Physics', 'ar' => 'រូបវិទ្យា'],
+            ['en' => 'Chemistry', 'ar' => 'គីមី'],
+            ['en' => 'Biology', 'ar' => 'ជីវវិទ្យា'],
+            ['en' => 'History', 'ar' => 'ប្រវត្តិសាស្ត្រ'],
+            ['en' => 'Geography', 'ar' => 'ភូមិវិទ្យា'],
+            ['en' => 'Sport', 'ar' => 'កីឡា'],
+
         ];
         foreach ($specializations as $S) {
             Specialization::create(['name' => $S]);
