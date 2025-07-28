@@ -13,13 +13,11 @@
 </head>
 
 <body class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500 h-screen" dir="ltr">
-
     {{-- Sidebar (always on the left) --}}
     @include('layouts.ltr.main-sidebar')
 
     {{-- Main Content --}}
     <main id="main-content" class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
-
         {{-- Navbar (LTR only) --}}
         @include('layouts.ltr.main-header')
 
@@ -27,7 +25,6 @@
         <div class="py-12">
             <div class="mx-auto sm:px-6 lg:px-8">
                 @yield('Content')
-
                 {{-- Only include the chat-bot Livewire component once --}}
                 @livewire('chat-bot')
             </div>
