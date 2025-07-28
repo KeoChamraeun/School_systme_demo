@@ -57,11 +57,11 @@ final class GradeTable extends PowerGridComponent
     /**
      * PowerGrid datasource.
      *
-     * @return Builder<\App\Models\Grade>
+     * @return Builder<\App\Models\grade>
      */
     public function datasource(): Builder
     {
-        return Grade::query();
+        return grade::query();
     }
 
     /*

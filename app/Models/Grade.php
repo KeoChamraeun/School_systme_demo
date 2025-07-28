@@ -2,44 +2,59 @@
 
 namespace App\Models;
 
-use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Grade extends Model
 {
-    // Import the HasFactory and HasTranslations traits
-    use HasFactory;
-    use HasTranslations;
+    use HasFactory, HasTranslations;
 
-    // Define the $translatable property, indicating which fields should be translated
+    /**
+     * The attributes that are translatable using Spatie.
+     *
+     * @var array
+     */
     public $translatable = ['name'];
 
-    // Define the $fillable property, indicating which fields can be mass-assigned
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'name',
         'notes',
     ];
 
+    /**
+     * Relationship: A grade has many users.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function users()
     {
         return $this->hasMany(User::class);
     }
 
-
+    /**
+     * Relationship: A grade has many classrooms.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function classrooms()
     {
         return $this->hasMany(Classroom::class);
     }
 
-
-    // To overwrite the default behavior of the asJson() method from the HasTranslations trait...
+    /**
+     * Override JSON encoding to support Unicode without escaping.
+     *
+     * @param mixed $value
+     * @return string
+     */
     protected function asJson($value)
     {
-        // Encode the given value as a JSON string, ensuring that Unicode characters are not escaped
         return json_encode($value, JSON_UNESCAPED_UNICODE);
     }
-
-
-
 }
