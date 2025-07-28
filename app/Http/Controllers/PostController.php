@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index($id)
     {
         $post = Post::findorfail($id);
-        return view('post-show',compact('post'));
+        return view('post-show', compact('post'));
     }
 
 
@@ -65,8 +65,8 @@ class PostController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'content' => 'required',
-            'grade_id'=>'nullable|exists:grades,id',
-            'classroom_id'=>'nullable|exists:classrooms,id',
+            'grade_id' => 'nullable|exists:grades,id',
+            'classroom_id' => 'nullable|exists:classrooms,id',
         ]);
 
         // Create the post and associate with authenticated user
@@ -80,11 +80,11 @@ class PostController extends Controller
         // Retrieve the uploaded image from the Spatie Media Library and attach it to the post
         $media = auth()->user()->getMedia('Postsimages')->last();
         if ($media) {
-            $media->move($post,'Postsimages');
+            $media->move($post, 'Postsimages');
             // $post->attachMedia($media, 'Posts-images');
         }
 
-        return redirect()->back()->with('success','تم نشر المنشور بنجاح.');
+        return redirect()->back()->with('success', 'Created Discussion successfully');
     }
 
     /**
@@ -92,16 +92,14 @@ class PostController extends Controller
      */
     public function destroy(Request $request)
     {
-            $post_id = $request->post_id;
-            $post = Post::findorfail($post_id);
+        $post_id = $request->post_id;
+        $post = Post::findorfail($post_id);
 
-            if((auth()->user()->id == $post->user->id) || (auth()->user()->isAdmin()))
-            {
-                $post->delete();
-               return Redirect::route('posts.index')->with('success', 'alert.discussion-deleted');
-            }
+        if ((auth()->user()->id == $post->user->id) || (auth()->user()->isAdmin())) {
+            $post->delete();
+            return Redirect::route('posts.index')->with('success', 'alert.discussion-deleted');
+        }
 
-           return Redirect::route('posts.index')->with('error', 'alert.error');
-
+        return Redirect::route('posts.index')->with('error', 'alert.error');
     }
 }
