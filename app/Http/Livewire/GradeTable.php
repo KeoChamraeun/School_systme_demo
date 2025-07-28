@@ -100,13 +100,13 @@ final class GradeTable extends PowerGridComponent
             ->addColumn('name')
 
             /** Example of custom column using a closure **/
-            ->addColumn('name_lower', function (grade $model) {
+            ->addColumn('name_lower', function (Grade $model) {
                 return strtolower(e($model->name));
             })
 
-            ->addColumn('notes', fn(grade $model) => Str::words(e($model->notes)))
-            ->addColumn('created_at_formatted', fn(grade $model) => Carbon::parse($model->created_at)->format('d-m-Y'))
-            ->addColumn('updated_at_formatted', fn(grade $model) => Carbon::parse($model->updated_at)->diffForHumans());
+            ->addColumn('notes', fn(Grade $model) => Str::words(e($model->notes)))
+            ->addColumn('created_at_formatted', fn(Grade $model) => Carbon::parse($model->created_at)->format('d-m-Y'))
+            ->addColumn('updated_at_formatted', fn(Grade $model) => Carbon::parse($model->updated_at)->diffForHumans());
     }
 
     /*
