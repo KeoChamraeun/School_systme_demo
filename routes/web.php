@@ -239,7 +239,6 @@ Route::middleware([
                     Route::get('attendances', [AttendancesController::class, 'index'])->name('attendances.index');
                     Route::get('attendance/classroom/{id}', [AttendancesController::class, 'viewAttendanceClassroom'])->name('attendance.classroom');
                     Route::post('attendance/classroom', [AttendancesController::class, 'store'])->name('attendance.store');
-
                     Route::get('attendance/report', [AttendancesController::class, 'viewAttendanceReport'])->name('attendance.report.export');
                 });
                 Route::group(['namespace' => "Meetings"], function () {
@@ -255,7 +254,6 @@ Route::middleware([
                     Route::get('exams/create', [ExamController::class, 'viewCreateExam'])->name('exams.create');
                     Route::delete('exams/delete', [ExamController::class, 'deleteSelected'])->name('exams.selected.destroy');
                 });
-
             });
 
             Route::middleware(['auth', 'checkRole:Teacher'])->group(function () {
