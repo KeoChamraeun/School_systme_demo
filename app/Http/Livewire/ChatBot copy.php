@@ -58,7 +58,6 @@ class ChatBot extends Component
     private function getAiResponse(string $message): string
     {
         $apiKey = env('GOOGLE_CLOUD_API_KEY');
-        Log::debug('Loaded Google API key: ' . ($apiKey ? '[REDACTED]' : 'MISSING'));
 
         if (empty($apiKey)) {
             throw new \Exception('Missing Google Cloud API Key.');
@@ -66,6 +65,7 @@ class ChatBot extends Component
 
         $client = new Client();
 
+        // Updated endpoint for Generative Language API (as of 2025, verify with Google documentation)
         $url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={$apiKey}";
 
         $payload = [
@@ -93,12 +93,10 @@ class ChatBot extends Component
             $body = json_decode($response->getBody()->getContents(), true);
             Log::debug('Google Generative AI Response: ', $body);
 
+            // Adjust based on the response structure for gemini-1.5-flash
             return $body['candidates'][0]['content']['parts'][0]['text'] ?? 'No response from Generative AI';
         } catch (\GuzzleHttp\Exception\RequestException $e) {
             Log::error('Google Generative AI Request Failed: ' . $e->getMessage());
-            if ($e->hasResponse()) {
-                Log::error('Response: ' . $e->getResponse()->getBody());
-            }
             throw $e;
         }
     }
