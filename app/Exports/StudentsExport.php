@@ -10,7 +10,7 @@ use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 
-class StudentsExport implements FromCollection , WithHeadings , WithStyles
+class StudentsExport implements FromCollection, WithHeadings, WithStyles
 {
     protected $gradeId;
     protected $classroomId;
@@ -20,11 +20,10 @@ class StudentsExport implements FromCollection , WithHeadings , WithStyles
     {
         $this->gradeId = $gradeId;
         $this->classroomId = $classroomId;
-
     }
 
 
-    public function collection() : Collection
+    public function collection(): Collection
     {
         $query = Student::query()->with(['parent', 'classroom', 'grade', 'nationality', 'religion', 'blood_type', 'gender']);
 
@@ -32,7 +31,7 @@ class StudentsExport implements FromCollection , WithHeadings , WithStyles
             $query->where('grade_id', $this->gradeId);
         }
 
-        if ($this->classroomId && $this->classroomId !== 'AllClassrooms')  {
+        if ($this->classroomId && $this->classroomId !== 'AllClassrooms') {
             $query->where('classroom_id', $this->classroomId);
         }
 
@@ -85,7 +84,7 @@ class StudentsExport implements FromCollection , WithHeadings , WithStyles
 
     public function styles(Worksheet $sheet)
     {
-        $sheet->setRightToLeft(true);
+        // $sheet->setRightToLeft(true);
         // Apply the styles to the sheet
         $sheet->getStyle('A1:M1')->applyFromArray([
             'font' => [
@@ -130,6 +129,4 @@ class StudentsExport implements FromCollection , WithHeadings , WithStyles
 
         ];
     }
-
-
 }

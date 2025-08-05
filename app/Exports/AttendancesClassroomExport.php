@@ -11,28 +11,27 @@ use Maatwebsite\Excel\Concerns\WithStyles;
 
 
 
-class AttendancesClassroomExport implements FromCollection , WithHeadings , WithStyles
+class AttendancesClassroomExport implements FromCollection, WithHeadings, WithStyles
 {
     protected $gradeId;
     protected $classroomId;
     protected $date;
 
 
-    public function __construct($gradeId = null, $classroomId = null,$date = null)
+    public function __construct($gradeId = null, $classroomId = null, $date = null)
     {
         $this->gradeId = $gradeId;
         $this->classroomId = $classroomId;
         $this->date = $date;
-
     }
 
     /**
-    * @return \Illuminate\Support\Collection
-    */
+     * @return \Illuminate\Support\Collection
+     */
 
-    public function collection() : Collection
+    public function collection(): Collection
     {
-        $query = Attendances::query()->with(['student', 'classroom', 'grade','teacher']);
+        $query = Attendances::query()->with(['student', 'classroom', 'grade', 'teacher']);
 
         if ($this->date) {
             $query->where('attendence_date', $this->date);
@@ -41,7 +40,7 @@ class AttendancesClassroomExport implements FromCollection , WithHeadings , With
             $query->where('grade_id', $this->gradeId);
         }
 
-        if ($this->classroomId)  {
+        if ($this->classroomId) {
             $query->where('classroom_id', $this->classroomId);
         }
 
@@ -86,7 +85,7 @@ class AttendancesClassroomExport implements FromCollection , WithHeadings , With
 
     public function styles(Worksheet $sheet)
     {
-        $sheet->setRightToLeft(true);
+        // $sheet->setRightToLeft(true);
 
         // Header row style
         $sheet->getStyle('A1:I1')->applyFromArray([
@@ -141,7 +140,4 @@ class AttendancesClassroomExport implements FromCollection , WithHeadings , With
             ],
         ];
     }
-
-
-
 }
